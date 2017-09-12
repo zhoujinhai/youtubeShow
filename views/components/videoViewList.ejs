@@ -1,0 +1,36 @@
+<div id="videoViewList" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr class="table-head">
+        <th>视频名称</th>
+        <th>排名</th>
+        <th>观看量</th>
+        <th>点赞量</th>
+        <th>点踩量</th>
+        <th>YouTube</th>
+      </tr>
+    </thead>
+
+    <% videoViewList.forEach(function(video){ %>
+        <% offset++ %>
+	    <tbody>
+	      <tr>
+	        <td>
+	        	<a href="/video/<%= video.videoId %>">
+	        		<%= video.videoName %>
+	        	</a>
+	        </td>
+	        <td><%= offset %></td>
+	        <td><%= video.viewCount %></td>
+	        <td><%= video.support %></td>
+	        <td><%= video.oppose %></td>
+	        <td>
+	        	<a href="<%= video.url %>" target="_blank">
+	        		<img src="/images/youtube_16.png">
+	        	</a>
+	        </td> 
+	      </tr>
+	    </tbody>
+	<% }) %>
+  </table>
+</div>

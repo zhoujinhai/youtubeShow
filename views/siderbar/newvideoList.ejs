@@ -1,0 +1,34 @@
+<div class="row">
+
+  <% newVideoList.forEach(function(newVideo){ %>
+
+	<div class="col-xs-12">
+		<div id="video-information" class="row">
+			<div class="col-xs-8">
+				<div class="video-title">
+					<a href="/video/<%= newVideo.videoId %>"><%= newVideo.videoName %></a>
+				</div>
+				<div class="video-pubTime">
+					<p><%= newVideo.pubTime %><p>
+				</div>
+				<div class="video-category">
+					<p>分类：<%= newVideo.videoClass %></p>
+				</div>	
+			</div>
+			<div class="col-xs-4">
+				<div class="video-viewers">
+					<p>观看人数：<%= newVideo.viewCount %></p>
+				</div>
+				<div class="video-support">
+					<p>点赞人数：<%= newVideo.support %></p>
+				</div>
+				<div class="video-oppose">
+					<p>点踩人数：<%= newVideo.oppose %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <% }) %>
+
+</div>

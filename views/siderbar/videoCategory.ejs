@@ -1,0 +1,23 @@
+<div id="channel-information" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr class="table-head">
+        <th>分类名称</th>
+        <th>视频数</th>
+      </tr>
+    </thead>
+
+  <% categoryList.forEach(function(category){ %>
+
+    <tbody>
+      <tr>
+        <td><%= category.categoryName %></td>
+        <td><%= category.categoryVideos %></td>
+      </tr>
+      
+    </tbody>
+
+  <% }) %>
+
+  </table>
+</div>

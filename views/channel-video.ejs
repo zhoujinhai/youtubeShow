@@ -1,0 +1,57 @@
+<%- include('components/header') %>
+	<%- include('components/hint') %>
+	<%- include('components/nav') %>
+	<div class="container">
+		
+		<div id="page-content">
+			<div id="all-video-information" class="table-responsive">
+				<table class="table table-hover">
+					<form class="form-inline" role="form">
+						<h3 class="all-video-title">订阅号(<%= channelVideoList[0].channelName %>)下的全部视频</h3>
+						
+			            <div id="nav-search" class="form-group">
+			                <label class="sr-only" for="name">名称</label>
+			                <input type="text" class="form-control" id="name" placeholder="search...">
+			            </div>
+
+			            <i class="glyphicon glyphicon-search"></i>
+		            </form>
+
+				<thead>
+				  <tr class="table-head">
+				  	<th>序号</th>
+				    <th>视频名称</th>
+				    <th>发布时间</th>
+				    <th>时长</th>
+				    <th>观看地址</th>
+				  </tr>
+				</thead>
+
+				
+				<% channelVideoList.forEach(function(video){ %>
+
+				<tbody>
+				  <tr>
+				    <td> <%= order %> </td>
+				    <td> 
+				    	<a href="/video/<%= video.videoId %>"><%= video.videoName %> 
+				    </td>
+				    <td> <%= video.pubTime %> </td>
+				    <td> <%= video.duration %>  </td>
+				    <td>  
+				    	<a href="<%= video.url %>" target="_blank"><img src="/images/youtube_16.png"></a>  
+	        		</td>
+				  </tr>
+				  
+				</tbody>
+
+				<% order++ %>
+
+				<% }) %>
+
+				</table>
+				</div>
+		</div>	
+	</div>
+    
+<%- include('components/footer') %>

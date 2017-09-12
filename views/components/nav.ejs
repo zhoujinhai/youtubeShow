@@ -1,0 +1,90 @@
+<div id="navigation">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="/">首页</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="/channel/order-by-subscribers" class="dropdown-toggle" data-toggle="dropdown">订阅量排名</a>
+                            <ul class="dropdown-menu animated">
+                                <li><a href="/channel/order-by-subscribers?number=10">前10名</a></li>
+                                <li><a href="/channel/order-by-subscribers?number=50">前50名</a></li>
+                                <li><a href="/channel/order-by-subscribers?number=100">前100名</a></li>
+                                <li><a href="/channel/order-by-subscribers?number=150">前150名</a></li>
+                                <li><a href="/channel/order-by-subscribers?number=200">前200名</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/channel/order-by-gains" class="dropdown-toggle" data-toggle="dropdown">订阅量增长排名</a>
+                            <ul class="dropdown-menu animated">
+                                <li><a href="/channel/order-by-gains?time=1">过去1小时</a></li>
+                                <li><a href="/channel/order-by-gains?time=6">过去6小时</a></li>
+                                <li><a href="/channel/order-by-gains?time=12">过去12小时</a></li>
+                                <li><a href="/channel/order-by-gains?time=24">过去1天</a></li>
+                                <li><a href="/channel/order-by-gains">过去7天</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li class="dropdown">
+                            <a href="/video/order-by-views" class="dropdown-toggle" data-toggle="dropdown">视频观看量排名</a>
+                            <ul class="dropdown-menu animated">
+                                <li><a href="/video/order-by-views?number=100">前100名</a></li>
+                                <li><a href="/video/order-by-views?number=500">前500名</a></li>
+                                <li><a href="/video/order-by-views?number=1000">前1000名</a></li>
+                                <li><a href="/video/order-by-views?number=1500">前1500名</a></li>
+                                <li><a href="/video/order-by-views?number=2000">前2000名</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/channel">订阅号</a></li>
+                        
+                        <li><a href="/video">视频</a></li>
+                        
+                        <% if(user){ %>
+                            <li class="dropdown">
+                                <a href="/user/<%= user.username %>/admin" class="dropdown-toggle" data-toggle="dropdown">用户：<%= user.username %></a>
+                                <ul class="dropdown-menu animated">
+                                    <li>
+                                        <a href="/user/<%= user.username %>/admin">
+                                            后台管理
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout">
+                                            <span class="glyphicon glyphicon-log-out"></span>
+                                            退出
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <% }else{ %>
+                            <li class="nav-right-login">
+                                <a href="/login">
+                                   <span class="glyphicon glyphicon-log-in"></span>
+                                   登录
+                                </a>
+                            </li>
+                            <li class="nav-right">
+                                <a href="signup">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    注册
+                                </a>
+                            </li>
+                            
+                        <% } %>
+                    </ul>
+                    
+
+                </div>
+            </nav>
+        </div>
+    </div>
+  </div>   
+</div>

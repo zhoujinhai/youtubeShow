@@ -1,0 +1,50 @@
+<%- include('../components/header') %>
+	<%- include('../components/hint') %>
+	
+	<%- include('nav-header') %>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10">
+				<div id="page-content">
+	    			<p class='page-title'>订阅号的订阅量情况</p>
+					<div id="channelList" class="table-responsive">
+					  <table class="table table-hover">
+					    <thead>
+					      <tr class="table-head">
+					        <th>序号</th>
+					        <th>订阅号名称</th>
+					        <th>订阅量</th>
+					        <th>订阅号ID</th>
+					        <th>YouTube地址</th>
+					      </tr>
+					    </thead>
+
+					    <% channelList.forEach(function(channel,index){ %>
+						    <tbody>
+						      <tr>
+						        <td class="channel-order"><%= index+1 %></td>
+						        <td class="channel-name">
+						        	<a href="/channel/<%= channel.channelId %>">
+						        		<%= channel.channel %>
+						        	</a>
+						        </td>
+						        <td class="channel-subscriber"><%= channel.subscriber %></td>
+						        <td><%= channel.channelId %></td>
+						        <td>点击：
+						        	<a href="<%= channel.channelUrl %>" target="_blank">
+						        		<img src="/images/youtube_16.png">
+						        	</a>
+						        </td>
+						      </tr>
+						    </tbody>
+						<% }) %>
+					  </table>
+					</div>
+					<div id="index-admin"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ </body>
+</html>

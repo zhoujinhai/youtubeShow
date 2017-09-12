@@ -1,0 +1,382 @@
+/*
+home css
+*/
+
+#page-content{
+	margin-top: 40px;
+}
+#page-content .page-title{
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	padding: 15px 0;	
+}
+#channelList{
+	padding-top: 20px;
+}
+#videoViewList{
+	padding-top: 20px;
+}
+/* ---------- siderbar ---------- */
+#siderbar .channel{
+	margin-top: 40px;
+	border-top: solid 1px red;
+
+}
+#siderbar .channel h3{
+	font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    background: red;
+    color: white;
+    margin-left: 35%;
+    margin-top: -1px;
+}
+#siderbar .channel-category{
+	margin-top: 40px;
+	border-top: solid 1px red;
+}
+
+#siderbar .channel-category h3{
+	  font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    background: red;
+    color: white;
+    margin-left: 35%;
+    margin-top: -1px;
+}
+#siderbar .channel-video{
+  margin-top: 40px;
+  border-top: solid 1px red;
+}
+#siderbar .channel-video h3{
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    background: red;
+    color: white;
+    margin-left: 40%;
+    margin-top: -1px;
+}
+#siderbar .channel-video button{ 
+    margin-left: 35%;
+}
+
+#myCarousel{
+	margin: 20px 0;
+}
+#myCarousel .carousel-indicators{
+	top: 80%;
+}
+#myCarousel .carousel-control{
+	padding-top: 15%;
+}
+#myCarousel .item .backimg{
+	height: 150px;
+}
+
+#video-list{
+	margin-top: 20px;
+}
+
+#video-list .new-video{
+	margin: 10px 0;
+	border-top: solid 1px red;
+}
+
+#video-list .hot-video{
+	margin: 10px 0;
+	border-top: solid 1px red;
+}
+
+#video-list .higersupport-video{
+	margin: 10px 0;
+	border-top: solid 1px red;
+}
+
+#video-list .caption{
+	font-size: 18px;
+	text-align: center;
+    display: inline-block;
+    padding: 5px 5px 0 5px;
+    background: red;
+    color: white;
+    margin: 0 0 20px 35%;
+}
+
+#video-information{
+	height: auto;
+	background-color: #efddc7;
+	margin: 6px -8px;
+	padding: 8px;
+}
+/*
+channel page
+*/
+#channelInformation{
+	background-color: rgba(63, 68, 82, 0.84);
+    color: #d2cccc;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-left: solid 5px #a94442;
+    border-radius: 10px;
+    box-shadow: 3px 4px 3px #aaaaaa;
+}
+#channelInformation .channel-logo img{
+	opacity: 0.8;
+    border-radius: 5px;
+}
+#channelInformation .channel-title {
+    margin-top: 25px;
+}
+/*
+video page
+*/
+#videoInformation{
+  	background-color: rgba(63, 68, 82, 0.84);
+    height: 350px;
+    overflow: hidden;
+    color: #d2cccc;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-left: solid 5px #a94442;
+    border-radius: 10px;
+    box-shadow: 3px 4px 3px #aaaaaa;
+}
+#videoInformation p{
+    overflow: hidden;
+}
+
+#all-channel-information .all-channel-title{
+  
+  margin: 15px 0;
+}
+
+
+/* ---------- d3 css ---------- */
+svg {
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px #b9bfba;
+    margin-top: 20px;
+}
+svg, g {
+  pointer-events: all;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.title {
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.linecircle {
+  fill: green;
+}
+.linecircle:hover {
+  fill: steelblue;
+}
+.flag {
+  stroke: gray;
+  stroke-dasharray: 5;
+  stroke-width: 1.5;
+  display: none;
+  pointer-events: none;
+}
+.tips {
+  pointer-events: none;
+  display: none;
+}
+.tips-border {
+  fill: #F3E4E4;
+  stroke: gray;        
+  stroke-width: 2;
+}
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+.grid path {
+  stroke-width: 0;
+}
+
+.tooltip{
+   font-family: simsun;
+   font-size: 14px;
+   width: 200;
+   height: auto;
+   position: absolute;
+   text-align: center;
+   border-style: solid; 
+   border-width: 1px;
+   background-color: #fff;
+   border-radius: 5px;
+   padding: 4px;
+}
+
+/*--- backTop ---*/
+.returnTop {
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    background-color: #2e9fff;
+    padding: 5px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+/*--- footer ---*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px;
+    background: #f8f8f8;
+    font-size: 14px;
+    bottom: 0;
+}
+
+/* ------- search ------- */
+
+.search-results {
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+  width: 295px;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  height: auto;
+  background: #f7f7f7;
+}
+
+@media screen and ( max-width: 768px ) {
+  .search-results {
+    width: 97%;
+  }
+}
+
+.search-results a,
+.search-results a:link {
+  color: #000;
+}
+
+.search-results a:hover,
+.search-results a:visited
+ {
+  color: #333;
+}
+
+.search-results-active .search-results {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cp-search-icon {
+  cursor: pointer;
+}
+/* ------- table search ------- */
+#all-channel-information .all-channel-title {
+    float: left;
+}
+#all-video-information .all-video-title {
+    float: left;
+}
+#nav-search {
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+i.glyphicon.glyphicon-search {
+    float: right;
+    margin-top: 25px;
+    margin-right: -192px;
+}
+
+/* ---------- 注册和登录页 ---------- */
+#signup{
+  padding-left:20%;
+  margin-top: 11%;
+  margin-bottom: 15%;
+}
+
+#login{
+  padding-left:20%;
+  margin-top: 11%;
+  margin-bottom: 20%;
+}
+#login .forget{
+  float:right;
+}
+/* ---------- 提示页 ---------- */
+
+#alt_warning {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -10px;
+    padding: 20px;
+    background: wheat;
+}
+
+#alt_success{
+    color: #2f6d47;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -10px;
+    padding: 20px;
+    background: wheat;
+}
+
+/* ---------- 后台管理页 ---------- */
+#admin-header .padding-top{
+    padding-top: 5px;
+}
+
+#admin-header .right{
+  padding-top: 15px;
+  float: right;
+  right: 40px;
+  list-style: none;
+}
+
+#user-sub .right {
+    float: right;
+    margin-bottom: -20px;
+    /* right: 15px; */
+}
+#index-admin{
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#repsw{
+  padding-left:20%;
+  margin-top: 11%;
+  margin-bottom: 15%;
+}
+
+#reInfo{
+  padding-left:20%;
+  margin-top: 11%;
+  margin-bottom: 15%;
+}

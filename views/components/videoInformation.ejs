@@ -1,0 +1,40 @@
+<div id="videoInformation" class="row">
+	<div class="col-xs-8">
+		<div class="video-title">
+			<p>视频名称：<%= videoInf[0].videoName %></p>
+		</div>
+		<div class="video-title">
+			<p>视频简介：<%= videoInf[0].intro %></p>
+		</div>
+		
+	</div>
+	<div class="col-xs-4">
+		<div class="video-channel">
+			<p>视频所属订阅号：<%= videoInf[0].channelName %></p>
+		</div>
+		<div class="video-category">
+			<p>视频所属分类：<%= videoInf[0].categoryName %></p>
+		</div>
+		<div class="video-Id">
+			<p>视频ID：<%= videoInf[0].videoId %></p>
+		</div>
+		<div class="video-duration">
+			<p>视频时长：<%= videoInf[0].duration %></p>
+		</div>
+		<div class="video-views">
+			<p>观看量：<span class="views"><%= videoInf[0].viewCount %></span></p>
+		</div>
+		<div class="video-support">
+			<p>点赞数：<sapn class="supports"><%= videoInf[0].support %></span></p>
+		</div>
+		<div class="video-oppose">
+			<p>点踩数：<span class="opposes"><%= videoInf[0].oppose %></span></p>
+		</div>
+		<div class="video-for-youtube">
+			<p>观看地址：
+				<a href="<%= videoInf[0].url %>">
+				<img src="/images/youtube_16.png"></a>
+			</p>
+		</div>
+	</div>
+</div>

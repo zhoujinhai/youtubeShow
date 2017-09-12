@@ -1,0 +1,29 @@
+<%- include('../components/header') %>
+	<%- include('../components/hint') %>
+
+	<%- include('nav-header') %>
+
+	<div class='container'>
+		<div class="row">
+			<div class='col-xs-10'>
+				<form class="form-inline" role="form" method="post" action="/user/<%= username %>/admin/subscriber/add">
+											  
+					<div class="form-group">
+					    <label>选择订阅号:</label>
+					       
+					    <select class="form-control" name="channelId">
+					    	<% allChannel.forEach(function(channel){ %>
+					        <option value="<%= channel.channelId %>"><%= channel.channel %></option>
+					        <% }) %>
+					    </select>
+					   
+					</div>
+					  
+					<button type="submit" class="btn btn-primary">添加</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+ </body>
+</html>

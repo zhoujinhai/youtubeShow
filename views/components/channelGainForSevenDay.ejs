@@ -1,0 +1,57 @@
+
+
+<div id="channelList" class="table-responsive">
+<div class="row">
+<div class="col-xs-6">
+	<table class="table table-hover">
+		<thead>
+			<tr class="table-head">
+		        <th>更新时间</th>
+		        <th>订阅量</th>
+		        <th>变化量</th>
+		     </tr>
+	    </thead>
+
+	    <% channelSevenDaySubList.forEach(function(channelDaySub,index){ %>
+	    	<% if(index<4){ %>
+		    <tbody>
+		      <tr>
+		      	<td class="updateTime"> <%= (channelDaySub.currentTime).toString().substr(4, 12) %> </td>
+		        <td class="channel-day-subscriber"> <%= channelDaySub.subscriber %> </td>
+		        <td class="channel-day-sub-change"> <%= channelDaySub.gain %> </td>
+		      </tr>
+		    </tbody>
+		    <% } %>
+		<% }) %>
+	</table>
+</div>
+<div class="col-xs-6">
+	<table class="table table-hover">
+		<thead>
+			<tr class="table-head">
+		        <th>更新时间</th>
+		        <th>订阅量</th>
+		        <th>变化量</th>
+		     </tr>
+	    </thead>
+
+	    <% channelSevenDaySubList.forEach(function(channelDaySub,index){ %>
+	    	<% if(index>=4){ %>
+		    <tbody>
+		      <tr>
+		      	<td class="updateTime"> <%= (channelDaySub.currentTime).toString().substr(4, 12) %> </td>
+		        <td class="channel-day-subscriber"> <%= channelDaySub.subscriber %> </td>
+		        <td class="channel-day-sub-change"> <%= channelDaySub.gain %> </td>
+		      </tr>
+		    </tbody>
+		    <% } %>
+		<% }) %>
+
+	
+	</table>
+	</div>
+	</div>
+</div>
+	
+
+	

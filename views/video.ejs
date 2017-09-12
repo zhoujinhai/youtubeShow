@@ -1,0 +1,28 @@
+<%- include('components/header') %>
+	<%- include('components/hint') %>
+	<%- include('components/nav') %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-lg-8">
+				<div id="page-content">
+	    			<%- include('components/videoInformation') %>
+	    			
+	    			<div id="video-scale-draw"></div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-lg-4">
+				<div id="siderbar">
+					<div class="channel">
+						<h3>相关订阅号</h3>
+						<%- include('siderbar/slide') %>
+					</div>
+					<div class="channel-category">
+						<h3>相关视频</h3>
+						<%- include('siderbar/videoList') %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+<%- include('components/footer') %>

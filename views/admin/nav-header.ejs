@@ -1,0 +1,36 @@
+<div id="admin-header">
+	<nav class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="/">网站首页</a>
+	    </div>
+	    <div>
+	        <ul class="nav navbar-nav">
+	            <li class="padding-top"><a href="/user/<%= username %>/admin/information">我的信息</a></li>
+	            <li class="padding-top">
+	            	<a href="/user/<%= username %>/admin/subscriber">我的订阅</a>
+	            </li>
+	            <li class="padding-top">
+	            	<a href="/user/<%= username %>/admin/subscriber/add">添加订阅</a>
+	            </li>
+	        </ul>
+	        <ul>
+	        	<li class="dropdown right">
+	        		<a href="/user/<%= username %>/admin"><%= username %></a>
+	                <a  class="dropdown-toggle" data-toggle="dropdown">
+	                    <b class="caret"></b>
+	                </a>
+	                <ul class="dropdown-menu">
+	                	<li>
+	                		<a href="/user/<%= username %>/admin/changepsw">更改密码</a>
+	                    </li>
+	                    <li>
+		                    <a href="/logout">安全退出</a>
+                        </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div>
+	    </div>
+	</nav>
+</div>	

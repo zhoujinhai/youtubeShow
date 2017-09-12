@@ -1,0 +1,74 @@
+<%- include('components/header') %>
+	<%- include('components/hint') %>
+	<%- include('components/nav') %>
+	<div class="container">
+		
+		<div id="page-content">
+			<div id="all-video-information" class="table-responsive">
+				<table class="table table-hover">
+					<form class="form-inline" role="form">
+						<h3 class="all-video-title">全部视频</h3>
+						
+			            <div id="nav-search" class="form-group">
+			                <label class="sr-only" for="name">名称</label>
+			                <input type="text" class="form-control" id="name" placeholder="search...">
+			            </div>
+
+			            <i class="glyphicon glyphicon-search"></i>
+		            </form>
+
+				<thead>
+				  <tr class="table-head">
+				  	<th>序号</th>
+				    <th>视频名称</th>
+				    <th>时长</th>
+				    <th>观看地址</th>
+				  </tr>
+				</thead>
+
+				
+				<% allVideoList.forEach(function(video){ %>
+
+				
+				<tbody>
+				  <tr>
+				    <td> <%= skip+1 %> </td>
+				    <td> 
+				    	<a href="/video/<%= video.videoId %>"><%= video.videoName %> 
+				    </td>
+				    <td> <%= video.duration %>  </td>
+				    <td>  
+				    	<a href="<%= video.url %>" target="_blank"><img src="/images/youtube_16.png"></a>  
+	        		</td>
+				  </tr>
+				  
+				</tbody>
+				<% skip++ %>
+				<% }) %>
+
+				</table>
+				</div>
+		</div>
+			
+
+		<!-- pagnation -->
+		<nav>
+		  <ul class="pager">
+		    <% if(page!==1){ %>
+		      <li class="previous"><a href="/video?page=<%= page-1 %>">&larr; 上一页</a></li>
+		    <% }else{ %>
+		      <li class="previous"></li>
+		    <% } %>
+		    
+		    <li>共<%= pages %>页 第<%= page %>页</li>
+		    <% if(page!==pages){ %>
+		      <li class="next"><a href="/video?page=<%= page+1 %>">下一页 &rarr;</a></li>
+		    <% }else{ %>
+		      <li class="next"></li>
+		    <% } %>
+		  </ul>
+		</nav>	
+		
+	</div>
+    
+<%- include('components/footer') %>

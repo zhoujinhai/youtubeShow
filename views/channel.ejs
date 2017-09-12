@@ -1,0 +1,42 @@
+<%- include('components/header') %>
+	<%- include('components/hint') %>
+	<%- include('components/nav') %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-lg-8">
+				<div id="page-content">
+	    			<%- include('components/channelInformation') %>
+	    			<p class='page-title'><span class="gain-date"><%= (channelDaySubList[0].currentTime).toString().substr(0, 16) %></span>订阅量变化情况表</p>
+	    			<%- include('components/channelGainForDay') %>
+	    			<!-- 一天折线图 -->
+	    			<div id="channel-gain-pitch-content"></div>
+	    			<!-- 七天折线图 -->
+	    			<p class='page-title'>近七天订阅量变化情况表</p>
+	    			<%- include('components/channelGainForSevenDay') %>
+	    			<!-- 一天折线图 -->
+	    			<div id="channel-seven-gain-pitch-content"></div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-lg-4">
+				<div id="siderbar">
+					<div class="channel">
+						<h3>相关订阅号</h3>
+						<%- include('siderbar/slide') %>
+					</div>
+					<div class="channel-category">
+						<h3>视频分类</h3>
+						<%- include('siderbar/videoCategory') %>
+					</div>
+					<div class="channel-video">
+						<h3>视频</h3>
+						<%- include('siderbar/channelVideo') %>
+						<button class="btn btn-default">
+							<a href="/channel/<%= channelId %>/allVideos">查看更多</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+<%- include('components/footer') %>

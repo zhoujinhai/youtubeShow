@@ -1,0 +1,23 @@
+<div id="channel-videos" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr class="table-head">
+        
+      </tr>
+    </thead>
+
+  <% channelVideos.forEach(function(video){ %>
+
+    <tbody>
+      <tr>
+        <td>
+        	<a href="/video/<%= video.videoId %>"><%= video.videoName %></a>
+        </td>
+      </tr>
+      
+    </tbody>
+
+  <% }) %>
+
+  </table>
+</div>

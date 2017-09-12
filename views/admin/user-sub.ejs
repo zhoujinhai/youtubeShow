@@ -1,0 +1,45 @@
+<%- include('../components/header') %>
+	<%- include('../components/hint') %>
+	
+	<%- include('nav-header') %>
+	<div class='container'>
+		<div class="row">
+			<div class='col-xs-10'>
+				<div id="user-sub" class="table-responsive">
+				  <table class="table table-hover">
+				    <caption>我的订阅号</caption>
+
+				    <thead>
+				      <tr class="table-head">
+				       		<th>订阅名称</th>
+				       		<th>订阅量</th>
+				       		<th>订阅号ID</th>
+				       		<th>查看订阅号</th>
+				       		<th>操作</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <% if(channelOfUser.length>0){ %>
+				      <% channelOfUser.forEach(function(channel){ %>
+				      <tr>
+				      	<td><%= channel.channel %></td>
+				        <td><%= channel.subscriber %></td>
+				        <td><%= channel.channelId %></td>
+				        <td>
+				        	<a href="/channel/<%= channel.channelId %>"><img src="/images/youtube_16.png"></a>
+				        </td>
+				        <td><a href="/user/<%= username %>/<%= channel.channelId %>/remove">删除</a></td>
+				      </tr>
+				      <% }) %>
+				      <% } %>
+				    </tbody>
+				  </table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+ </body>
+</html>

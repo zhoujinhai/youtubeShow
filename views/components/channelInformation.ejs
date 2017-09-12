@@ -1,0 +1,31 @@
+<div id="channelInformation" class="row">
+	<div class="col-xs-5">
+		<div class="channel-logo">
+			<img src="/images/<%= channelId %>.jpg">
+		</div>
+		<div class="channel-title">
+			<p>订阅号名称：<%= channelName %></p>
+		</div>
+		
+	</div>
+	<div class="col-xs-7">
+		<div class="channel-sub">
+			<p>订阅量：<%= channelSubscribers %></p>
+		</div>
+		<div class="channel-Id">
+			<p>订阅号ID：<%= channelId %></p>
+		</div>
+		<div class="channel-category-number">
+			<p>视频分类数：<%= categoryList.length %></p>
+		</div>
+		<div class="channel-video-number">
+			<p>视频数：<%= channelVideoCount %></p>
+		</div>
+		<div class="channel-for-youtube">
+			<p>YouTube地址：
+				<a href="<%= channelUrl %>">
+				<img src="/images/youtube_16.png"></a>
+			</p>
+		</div>
+	</div>
+</div>

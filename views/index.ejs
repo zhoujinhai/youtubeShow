@@ -1,0 +1,44 @@
+<%- include('components/header') %>
+	<%- include('components/hint') %>
+	<%- include('components/nav') %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-lg-8">
+				<div id="page-content">
+	    			<p class='page-title'>订阅量排名前<%= number %>的订阅号</p>
+					<%- include('components/channelListHome') %>
+					<div id="index-pitch-content"></div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-lg-4">
+				<div id="siderbar">
+					<div class="channel">
+						<h3>相关订阅号</h3>
+						<%- include('siderbar/slide') %>
+					</div>
+					<div id="video-list">
+						<div class="new-video">
+							<div class="caption">
+								<p>最新视频<p>
+							</div>
+							<%- include('siderbar/newvideoList') %>
+						</div>
+						<div class="hot-video">
+							<div class="caption">
+								<p>最热视频<p>
+							</div>
+							<%- include('siderbar/hotvideoList') %>
+						</div>
+						<div class="higersupport-video">
+							<div class="caption">
+								<p>高评分视频<p>
+							</div>
+							<%- include('siderbar/higherSupvideoList') %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+<%- include('components/footer') %>
